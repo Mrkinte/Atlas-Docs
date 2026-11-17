@@ -1,0 +1,38 @@
+.md-cols {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.md-col {
+  min-width: 0;
+}
+
+.md-col-hcenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.md-col-vcenter {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+html:not(.dark) .md-img-dark,
+html.dark .md-img-light {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .md-cols {
+    grid-auto-flow: row;
+  }
+}
